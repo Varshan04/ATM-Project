@@ -1,0 +1,26 @@
+balance=10000
+x = 0
+while x<=5:
+    print("welcome to the ATM")
+    print("check balance")
+    print("cash withdrawl")
+    print("cash deposit")
+    print("exit")
+    x=int(input("enter the choice(1-4) : "))
+    if(x==1):
+        print(f"your balance is : {balance} ")
+    elif(x==2):
+        amount=float(input("enter amount to withdrawl : "))
+        if amount>balance:
+            print("insufficient fund")
+        else:
+            balance-=amount
+            print("withdrawl amount successful")
+    elif(x==3):
+        amount=float(input("enter the amount to deposit"))
+        amount+=balance
+        print("deposited amount successful")
+    elif(x==4):
+        print("Thank for using our ATM")
+    else:
+        print("invalid choice.please try again")
